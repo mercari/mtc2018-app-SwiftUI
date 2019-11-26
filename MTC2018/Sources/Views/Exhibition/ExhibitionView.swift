@@ -29,7 +29,28 @@ struct ExhibitionView : View {
                         Spacer()
                     }
                 } else {
-                    PageView([
+                    // NavigationLink in PageView crashes on Xcode11.2.1
+//                    PageView([
+//                        ScrollView(.vertical, showsIndicators: true) {
+//                            ForEach(viewModel.boothAExhibitions, id: \.id) { exhibition in
+//                                VStack {
+//                                    ExhibitionRow(exhibition: exhibition)
+//                                    Divider()
+//                                }
+//                            }
+//                        },
+//                        ScrollView(.vertical, showsIndicators: true) {
+//                            ForEach(viewModel.boothBExhibitions, id: \.id) { exhibition in
+//                                VStack {
+//                                    ExhibitionRow(exhibition: exhibition)
+//                                    Divider()
+//                                }
+//                            }
+//                        }
+//                    ], currentPage: $page)
+
+                    // Workaround
+                    if page == 0 {
                         ScrollView(.vertical, showsIndicators: true) {
                             ForEach(viewModel.boothAExhibitions, id: \.id) { exhibition in
                                 VStack {
@@ -37,7 +58,8 @@ struct ExhibitionView : View {
                                     Divider()
                                 }
                             }
-                        },
+                        }
+                    } else {
                         ScrollView(.vertical, showsIndicators: true) {
                             ForEach(viewModel.boothBExhibitions, id: \.id) { exhibition in
                                 VStack {
@@ -46,7 +68,7 @@ struct ExhibitionView : View {
                                 }
                             }
                         }
-                    ], currentPage: $page)
+                    }
                 }
             }
             .navigationBarTitle(Text("Booth"))
