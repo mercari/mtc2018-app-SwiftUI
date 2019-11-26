@@ -47,7 +47,7 @@ struct PageViewController: UIViewControllerRepresentable {
                 return nil
             }
             if index == 0 {
-                return nil
+                return parent.controllers.last
             }
             return parent.controllers[index - 1]
         }
@@ -60,7 +60,7 @@ struct PageViewController: UIViewControllerRepresentable {
                 return nil
             }
             if index + 1 == parent.controllers.count {
-                return nil
+                return parent.controllers.first
             }
             return parent.controllers[index + 1]
         }

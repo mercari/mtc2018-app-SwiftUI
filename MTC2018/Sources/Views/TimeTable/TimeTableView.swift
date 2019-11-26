@@ -29,7 +29,29 @@ struct TimeTableView : View {
                         Spacer()
                     }
                 } else {
-                    PageView([
+                    // NavigationLink in PageView crashes on Xcode11.2.1
+//                    PageView([
+//                        ScrollView(.vertical, showsIndicators: true) {
+//                            ForEach(viewModel.trackASessions, id: \.id) { session in
+//                                VStack {
+//                                    TimeTableRow(session: session)
+//                                    Divider()
+//                                }
+//
+//                            }
+//                        },
+//                        ScrollView(.vertical, showsIndicators: true) {
+//                            ForEach(viewModel.trackBSessions, id: \.id) { session in
+//                                VStack {
+//                                    TimeTableRow(session: session)
+//                                    Divider()
+//                                }
+//                            }
+//                        }
+//                    ], currentPage: $page)
+
+                    // Workaround
+                    if page == 0 {
                         ScrollView(.vertical, showsIndicators: true) {
                             ForEach(viewModel.trackASessions, id: \.id) { session in
                                 VStack {
@@ -38,7 +60,8 @@ struct TimeTableView : View {
                                 }
 
                             }
-                        },
+                        }
+                    } else {
                         ScrollView(.vertical, showsIndicators: true) {
                             ForEach(viewModel.trackBSessions, id: \.id) { session in
                                 VStack {
@@ -47,7 +70,7 @@ struct TimeTableView : View {
                                 }
                             }
                         }
-                    ], currentPage: $page)
+                    }
                 }
             }
             .navigationBarTitle(Text("TimeTable"))
