@@ -36,13 +36,8 @@ struct AboutView : View {
                         Text("About.Access.Subway.Description")
                             .font(.system(size: 14))
                             .padding(.bottom, 12)
-                        Button(action: {
-                            let map = "https://maps.apple.com/?sll=35.6604311,139.7287178&z=10&q=%e5%85%ad%e6%9c%ac%e6%9c%a8%e3%82%a2%e3%82%ab%e3%83%87%e3%83%9f%e3%83%bc%e3%83%92%e3%83%ab%e3%82%ba";
-                            let url = URL(string: map)!
-                            UIApplication.shared.open(url)
-                        }) {
-                            Text("About.OpenMap")
-                        }                    }.padding(.bottom, 24)
+                        Link("About.OpenMap", destination: URL(string: "https://maps.apple.com/?sll=35.6604311,139.7287178&z=10&q=%e5%85%ad%e6%9c%ac%e6%9c%a8%e3%82%a2%e3%82%ab%e3%83%87%e3%83%9f%e3%83%bc%e3%83%92%e3%83%ab%e3%82%ba")!)
+                    }.padding(.bottom, 24)
                     VStack(alignment: .leading, spacing: nil) {
                         Text("About.Access.Bus.Title")
                             .font(.system(size: 18, weight: .bold))
@@ -65,14 +60,10 @@ struct AboutView : View {
                         Text("About.AccessToAcademyhills")
                             .font(.system(size: 18, weight: .bold))
                             .padding(.bottom, 12)
-                        NavigationLink(destination: WebView(url: URL(string: "https://forum.academyhills.com/roppongi/access/index.html")!).navigationBarTitle(Text(""), displayMode: .inline)) {
-                            Text("About.AcademyhillsSite")
-                                .padding(.bottom, 12)
-                        }
-                        
+                        Link("About.AcademyhillsSite", destination: URL(string: "https://forum.academyhills.com/roppongi/access/index.html")!)
                     }
                 }
-                .padding(24)
+                .padding(20)
             }
             .navigationBarTitle(Text("About"))
         }
