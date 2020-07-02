@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1043D0CD22D8C8EE0079CDE5 /* AppleIDButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043D0CC22D8C8EE0079CDE5 /* AppleIDButtonViewController.swift */; };
 		1043D0CF22D8C9920079CDE5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043D0CE22D8C9920079CDE5 /* LoginView.swift */; };
 		1088874023063E1A008CE392 /* ExhibitionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088873F23063E1A008CE392 /* ExhibitionRow.swift */; };
 		108887422306434C008CE392 /* ExhibitionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108887412306434C008CE392 /* ExhibitionDetailView.swift */; };
@@ -80,7 +79,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1043D0CC22D8C8EE0079CDE5 /* AppleIDButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleIDButtonViewController.swift; sourceTree = "<group>"; };
 		1043D0CE22D8C9920079CDE5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1088873F23063E1A008CE392 /* ExhibitionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitionRow.swift; sourceTree = "<group>"; };
 		108887412306434C008CE392 /* ExhibitionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitionDetailView.swift; sourceTree = "<group>"; };
@@ -304,7 +302,6 @@
 		24DF8AD82350C0C800ADE0D6 /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				1043D0CC22D8C8EE0079CDE5 /* AppleIDButtonViewController.swift */,
 				1043D0CE22D8C9920079CDE5 /* LoginView.swift */,
 				24BE62FD2351DA1D00055185 /* AccountView.swift */,
 				247F677D235499AA0097E5A1 /* ProfileView.swift */,
@@ -577,7 +574,6 @@
 				249720AB22EF291D00C46A38 /* PageView.swift in Sources */,
 				244A5CEA23534781009435EC /* GetExhibitionsRequest.swift in Sources */,
 				24F13EC622E719460004D8F4 /* TimeTableDetailView.swift in Sources */,
-				1043D0CD22D8C8EE0079CDE5 /* AppleIDButtonViewController.swift in Sources */,
 				24BE63082352036C00055185 /* UnidirectionalDataFlowType.swift in Sources */,
 				249720AD22EF296300C46A38 /* PageViewController.swift in Sources */,
 				24F6B63B22CE00D7000FFB8D /* ContentView.swift in Sources */,
@@ -750,6 +746,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MTC2018/MTC2018.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "MTC2018/Preview\\ Content";
 				DEVELOPMENT_TEAM = "";
@@ -772,6 +769,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MTC2018/MTC2018.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "MTC2018/Preview\\ Content";
 				DEVELOPMENT_TEAM = "";
