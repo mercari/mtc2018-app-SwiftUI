@@ -12,35 +12,47 @@ struct ProfileView: View {
     @EnvironmentObject private var userState: UserState
 
     var body: some View {
-        let keys = ["ID", "Name", "Email"]
-        let values = [userState.user!.id, userState.user!.name, userState.user!.email]
-
         return ScrollView(.vertical, showsIndicators: true) {
-            VStack(alignment: .leading, spacing: 24) {
-                ForEach(keys.indices) {index in
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text(keys[index])
-                            .font(.system(size: 14, weight: .bold))
-                        Text(values[index])
-                            .font(.system(size: 18))
-                    }
+            if let user = userState.user {
+                VStack(alignment: .leading, spacing: 24) {
+                    Row(key: "ID", value: user.id)
                     Divider()
+                    Row(key: "Name", value: user.name)
+                    Divider()
+                    Row(key: "Email", value: user.email)
+                    Divider()
+                    Spacer()
+                    Button(action: {
+                        UserDefaults.standard.set(nil, forKey: "user")
+                        userState.user = nil
+                    }) {
+                        Text("SignOut")
+                    }
                 }
-                Spacer()
-                Button(action: {
-                    UserDefaults.standard.set(nil, forKey: "user")
-                    self.userState.user = nil
-                }) {
-                    Text("SignOut")
-                }
+                .padding(24)
             }
-            .padding(24)
         }
     }
 }
+
+struct Row: View {
+    var key: String
+    var value: String
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(key)
+                .font(.system(size: 14, weight: .bold))
+            Text(value)
+                .font(.system(size: 18))
+        }
+    }
+}
+
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
     }
 }
+
