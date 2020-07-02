@@ -48,26 +48,24 @@ struct TimeTableView : View {
                     }
                 } else {
                     PageView([
-                        ScrollView(.vertical, showsIndicators: true) {
+                        List {
                             ForEach(viewModel.trackASessions, id: \.id) { session in
-                                VStack {
+                                NavigationLink(destination: TimeTableDetailView(viewModel: TimeTableDetailViewModel(session: session))) {
                                     TimeTableRow(session: session)
-                                    Divider()
                                 }
-
                             }
                         },
-                        ScrollView(.vertical, showsIndicators: true) {
+                        List {
                             ForEach(viewModel.trackBSessions, id: \.id) { session in
-                                VStack {
+                                NavigationLink(destination: TimeTableDetailView(viewModel: TimeTableDetailViewModel(session: session))) {
                                     TimeTableRow(session: session)
-                                    Divider()
                                 }
                             }
                         }
                     ], currentPage: $page)
                 }
             }
+            .listStyle(PlainListStyle())
             .navigationBarTitle(Text("TimeTable"))
         }
         .onAppear(perform: {

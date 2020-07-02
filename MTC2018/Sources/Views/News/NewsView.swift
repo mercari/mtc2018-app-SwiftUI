@@ -21,17 +21,17 @@ struct NewsView : View {
                         Spacer()
                     }
                 } else {
-                    ScrollView(.vertical, showsIndicators: true) {
+                    List {
                         ForEach(viewModel.news, id: \.id) { news in
                             VStack(alignment: .leading, spacing: nil) {
                                 self.buildRow(news: news)
-                                Divider()
                             }
                         }
                     }
                 }
             }
             .navigationBarTitle(Text("News"))
+            .listStyle(GroupedListStyle())
         }
         .onAppear(perform: {
             self.viewModel.apply(.onAppear)

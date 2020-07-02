@@ -13,26 +13,25 @@ struct ExhibitionRow: View {
     @State var exhibition: Exhibition
 
     var body: some View {
-        NavigationLink(destination: ExhibitionDetailView(viewModel: ExhibitionDetailViewModel(exhibition: exhibition))) {
-            VStack(alignment: .leading, spacing: nil) {
-                if !exhibition.exhibitionImage.isEmpty {
-                    Image(exhibition.exhibitionImage.components(separatedBy: ".")[0])
-                        .renderingMode(.original)
-                        .resizable()
+
+        VStack(alignment: .leading, spacing: nil) {
+            if !exhibition.exhibitionImage.isEmpty {
+                Image(exhibition.exhibitionImage.components(separatedBy: ".")[0])
+                    .renderingMode(.original)
+                    .resizable()
                     .scaledToFit()
-                }
-
-                Text(exhibition.localizedTitle)
-                    .font(.system(size: 18, weight: .bold))
-                    .padding(.bottom, 8)
-
-                Text(exhibition.localizedDescription)
-                    .lineLimit(3)
-                    .font(.system(size: 14))
-
             }
-            .foregroundColor(.primary)
+
+            Text(exhibition.localizedTitle)
+                .font(.system(size: 18, weight: .bold))
+                .padding(.bottom, 8)
+
+            Text(exhibition.localizedDescription)
+                .lineLimit(3)
+                .font(.system(size: 14))
+
         }
+        .foregroundColor(.primary)
         .padding(EdgeInsets(top: 12, leading: 24, bottom: 12, trailing: 24))
     }
 }
