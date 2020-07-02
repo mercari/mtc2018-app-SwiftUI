@@ -10,9 +10,21 @@ import SwiftUI
 
 @main
 struct MTC2018App: App {
+
+    @StateObject var userState: UserState = {
+        let jsonDecoder = JSONDecoder()
+
+        let userState = UserState()
+        if let userData = UserDefaults.standard.data(forKey: "user"), let user = try? jsonDecoder.decode(User.self, from: userData) {
+            userState.user = user
+        }
+        return userState
+    }()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(userState)
         }
     }
 }

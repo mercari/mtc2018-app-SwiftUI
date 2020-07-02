@@ -195,12 +195,12 @@
 		2448487623509DAC008E3A35 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				24A0E6AB24AD71FA00765907 /* MTC2018App.swift */,
 				24BE6306235202F200055185 /* Core */,
 				2473EC7A22D7625C00D021EA /* Models */,
 				24BE62FF2351E23800055185 /* Services */,
 				247EC1B7235015A500ABFDE5 /* Utils */,
 				2473EC7922D7603F00D021EA /* Views */,
-				24A0E6AB24AD71FA00765907 /* MTC2018App.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
