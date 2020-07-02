@@ -62,7 +62,8 @@ struct TimeTableDetailView: View {
                 .background(Color.mtcGray)
                 .cornerRadius(8)
             }
-            .padding(EdgeInsets(top: 0, leading: 24, bottom: 24, trailing: 24))
+            .padding(24)
+            .navigationBarTitle(Text(""), displayMode: .inline)
         }
     }
 }

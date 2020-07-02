@@ -30,19 +30,17 @@ struct ExhibitionView : View {
                     }
                 } else {
                     PageView([
-                        ScrollView(.vertical, showsIndicators: true) {
+                        List {
                             ForEach(viewModel.boothAExhibitions, id: \.id) { exhibition in
-                                VStack {
+                                NavigationLink(destination: ExhibitionDetailView(viewModel: ExhibitionDetailViewModel(exhibition: exhibition))) {
                                     ExhibitionRow(exhibition: exhibition)
-                                    Divider()
                                 }
                             }
                         },
-                        ScrollView(.vertical, showsIndicators: true) {
+                        List {
                             ForEach(viewModel.boothBExhibitions, id: \.id) { exhibition in
-                                VStack {
+                                NavigationLink(destination: ExhibitionDetailView(viewModel: ExhibitionDetailViewModel(exhibition: exhibition))) {
                                     ExhibitionRow(exhibition: exhibition)
-                                    Divider()
                                 }
                             }
                         }
@@ -50,6 +48,7 @@ struct ExhibitionView : View {
                 }
             }
             .navigationBarTitle(Text("Booth"))
+            .listStyle(PlainListStyle())
         }
         .onAppear(perform: {
             self.viewModel.apply(.onAppear)
