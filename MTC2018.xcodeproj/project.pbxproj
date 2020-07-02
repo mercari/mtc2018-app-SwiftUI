@@ -23,7 +23,6 @@
 		24468A33235353FB00F1479F /* ExhibitionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24468A32235353FA00F1479F /* ExhibitionViewModel.swift */; };
 		24468A35235355EB00F1479F /* ExhibitionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24468A34235355EB00F1479F /* ExhibitionDetailViewModel.swift */; };
 		24468A372353620200F1479F /* ConferenceMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24468A362353620200F1479F /* ConferenceMapViewModel.swift */; };
-		244A5CE22352B93B009435EC /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244A5CE12352B93B009435EC /* ActivityIndicator.swift */; };
 		244A5CE42353402E009435EC /* GetNewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244A5CE32353402E009435EC /* GetNewsRequest.swift */; };
 		244A5CE6235340E1009435EC /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244A5CE5235340E1009435EC /* NewsViewModel.swift */; };
 		244A5CE823534340009435EC /* TimeTableDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244A5CE723534340009435EC /* TimeTableDetailViewModel.swift */; };
@@ -99,7 +98,6 @@
 		24468A32235353FA00F1479F /* ExhibitionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitionViewModel.swift; sourceTree = "<group>"; };
 		24468A34235355EB00F1479F /* ExhibitionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitionDetailViewModel.swift; sourceTree = "<group>"; };
 		24468A362353620200F1479F /* ConferenceMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceMapViewModel.swift; sourceTree = "<group>"; };
-		244A5CE12352B93B009435EC /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		244A5CE32353402E009435EC /* GetNewsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNewsRequest.swift; sourceTree = "<group>"; };
 		244A5CE5235340E1009435EC /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		244A5CE723534340009435EC /* TimeTableDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableDetailViewModel.swift; sourceTree = "<group>"; };
@@ -329,7 +327,6 @@
 				249720AC22EF296300C46A38 /* PageViewController.swift */,
 				247EC1BA2350182800ABFDE5 /* URLImage.swift */,
 				24E96B2822E5F56A0075CCDC /* WebView.swift */,
-				244A5CE12352B93B009435EC /* ActivityIndicator.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -582,7 +579,6 @@
 				24F13EC622E719460004D8F4 /* TimeTableDetailView.swift in Sources */,
 				1043D0CD22D8C8EE0079CDE5 /* AppleIDButtonViewController.swift in Sources */,
 				24BE63082352036C00055185 /* UnidirectionalDataFlowType.swift in Sources */,
-				244A5CE22352B93B009435EC /* ActivityIndicator.swift in Sources */,
 				249720AD22EF296300C46A38 /* PageViewController.swift in Sources */,
 				24F6B63B22CE00D7000FFB8D /* ContentView.swift in Sources */,
 				2472A16822EE7EEB00EE8187 /* TagView.swift in Sources */,

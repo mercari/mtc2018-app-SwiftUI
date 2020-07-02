@@ -25,7 +25,7 @@ struct ExhibitionView : View {
                 if viewModel.isLoading {
                     VStack {
                         Spacer()
-                        ActivityIndicator(isAnimating: $viewModel.isLoading, style: .medium)
+                        ProgressView()
                         Spacer()
                     }
                 } else {
